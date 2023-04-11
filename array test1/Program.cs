@@ -1,27 +1,16 @@
-﻿internal class Program
+internal class Program
 {
     private static void Main(string[] args)
     {
-        int i;
-
         string[] cars = { "Dacia", "Aro", "DAC", "Marta" };
-
         int[] myNum = { 1310, 240, 665, 415 };
-        for (i = 0; i < 1; i++)
-        {
-            Console.Write(cars[0]);
-            Console.Write("  ");
-            Console.WriteLine(myNum[0]);
-            Console.Write(cars[1]);
-            Console.Write("  ");
-            Console.WriteLine(myNum[1]);
-            Console.Write(cars[2]);
-            Console.Write("  ");
-            Console.WriteLine(myNum[2]);
-            Console.Write(cars[3]);
-            Console.Write("  ");
-            Console.WriteLine(myNum[3]);
-        }
 
+        Console.WriteLine("Car Name".PadRight(10) + "Number".PadLeft(5));
+        Console.WriteLine("".PadRight(15, '-'));
+
+        for (int i = 0; i < cars.Length; i++)
+        {
+            Console.WriteLine($"{cars[i],-10}" + $"{myNum[i],5}");
+        }
     }
 }
